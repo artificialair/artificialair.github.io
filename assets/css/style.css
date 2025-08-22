@@ -8,9 +8,10 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
-    background: #fff;
-    color: #222;
+    background-color: #111;
+    color: #f5f5f5;
     padding: 2rem;
+    
 }
 
 h1 {
@@ -20,11 +21,6 @@ h1 {
 }
 
 /* Portfolio Page Styles */
-body.portfolio {
-    background-color: #111;
-    color: #f5f5f5;
-}
-
 body.portfolio h1 {
     color: #f5f5f5;
 }
@@ -38,21 +34,39 @@ body.portfolio .grid {
 }
 
 body.portfolio .card {
-    background: #1c1c1c;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    position: relative;
+    padding-bottom: 56.25%;
+    background: center no-repeat;
+    background-image: none;
+    background-size: auto;
+    background-size: auto 100%;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .2s;
+}
+
+body.portfolio .card .overlay {
+    background: rgba(17, 17, 17, .7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 80%
 }
 
 body.portfolio .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    background-size:auto 105%
 }
 
 body.portfolio .card h2 {
     margin-bottom: 0.5rem;
     font-size: 1.25rem;
+    color: #f5f5f5;
 }
 
 body.portfolio .card p {
